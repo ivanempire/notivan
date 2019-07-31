@@ -8,3 +8,9 @@
 	export default {
 	}
 </script>
+
+<style scoped>
+section {
+	transition: background-color 0.7s linear;
+}
+</style>

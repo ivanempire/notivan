@@ -9,7 +9,8 @@
     "VueJS"
   ],
   "scripts": {
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "build": "webpack -p"
   },
   "author": "Ivan Melnikov",
   "license": "ISC",
@@ -21,6 +22,7 @@
     "style-loader": "^0.23.1",
     "uikit": "^3.1.6",
     "vue": "^2.6.10",
+    "vue-analytics": "^5.17.0",
     "vue-loader": "^15.7.1",
     "vue-template-compiler": "^2.6.10",
     "webpack": "^4.37.0",
