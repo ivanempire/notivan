@@ -1,0 +1,10 @@
+@font-face {
+	font-weight: bold;
+	font-style: normal;
+	font-family:"Cera Basic";
+	src: url("./assets/fonts/CeraProBold.otf");
+}
+html, body {
+	width:100%;
+	height:100%;
+}
