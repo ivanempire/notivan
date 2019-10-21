@@ -2,12 +2,17 @@
 	<ul>
 		<li><a href="https://www.linkedin.com/in/imelnikov" uk-icon="icon: linkedin; ratio: 2"></a></li>
 		<li><a href="https://www.500px.com/ivanempire" uk-icon="icon: 500px; ratio: 2"></a></li>
+		<li><a :href="resumeLink" uk-icon="icon: 500px; ratio: 2"></a></li>
 	</ul>
 </template>
 
 <script>
 	export default {
-
+		data() {
+			return {
+				resumeLink: require("../assets/imelnikov.pdf")
+			}
+		}
 	}
 </script>
 

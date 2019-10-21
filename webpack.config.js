@@ -36,7 +36,7 @@ module.exports = {
 			use: ["vue-style-loader", "css-loader"]
 		},
 		{
-			test: /\.(woff|woff2|eot|ttf|otf)$/,
+			test: /\.(woff|woff2|eot|ttf|otf|pdf)$/,
 			use: ["file-loader"]
 		}]
 	},
