@@ -7,10 +7,12 @@
 </template>
 
 <script>
+	import resume from "../assets/imelnikov - resume.pdf";
+	
 	export default {
 		data() {
 			return {
-				resumeLink: require("../assets/imelnikov.pdf")
+				resumeLink: resume
 			}
 		}
 	}
