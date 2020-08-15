@@ -31,9 +31,15 @@ module.exports = {
 			exclude: /node_modules/
 		},
 		{
-			test: /\.css$/,
+			test: /\.css$/i,
 			include: /src|node_modules/,
-			use: ["vue-style-loader", "css-loader"]
+			use: ["vue-style-loader",
+			{
+				loader: "css-loader",
+				options: {
+					esModule: false
+				}
+			}]
 		},
 		{
 			test: /\.(woff|woff2|eot|ttf|otf|pdf)$/,
