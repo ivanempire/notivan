@@ -1,14 +1,14 @@
-import Vue from "vue";
+// Business logic
+import { createApp } from "vue";
 import UIkit from "uikit";
-import App from "./App.vue";
-
 import Icons from "uikit/dist/js/uikit-icons";
-import styles from "uikit/dist/css/uikit.min.css";
+import AppComponent from "./AppComponent.vue";
 
+// Styles
+import stylesCustom from "./global.css";
+import stylesDefault from "uikit/dist/css/uikit.min.css";
+
+// Create the app
 UIkit.use(Icons);
-
-new Vue({
-	el: "#content",
-	render: h => h(App),
-	components: { App }
-});
+const app = createApp(AppComponent);
+app.mount("#content");
