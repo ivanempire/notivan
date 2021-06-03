@@ -8,8 +8,7 @@ module.exports = {
     mode: "development",
     output: {
         filename: "notivan.js",
-        path: path.resolve(__dirname, "dist"),
-        publicPath: "/"
+        path: path.resolve(__dirname, "dist")
     },
     devServer: {
         publicPath: "/",
