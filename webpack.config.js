@@ -1,6 +1,5 @@
 const HtmlWebpackPlugin   = require("html-webpack-plugin");
 const { VueLoaderPlugin } = require("vue-loader");
-const webpack             = require("webpack");
 const path                = require("path");
 
 module.exports = {
@@ -9,6 +8,9 @@ module.exports = {
     output: {
         filename: "notivan.js",
         path: path.resolve(__dirname, "dist")
+    },
+    optimization: {
+        usedExports: true
     },
     devServer: {
         publicPath: "/",
