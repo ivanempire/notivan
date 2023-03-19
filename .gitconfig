@@ -1,6 +1,0 @@
-[user]
-	name = Ivan Melnikov
-	email = ivanempire@gmail.com
-	signingkey = 35D7DD67EAD50861
-[commit]
-	gpgsign = true
