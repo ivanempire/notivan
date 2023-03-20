@@ -8,19 +8,21 @@
 	};
 
 	let iconObjects: IconConfiguration[] = [
-			{
-				key: "linkedin",
-		link: ""
-	},
+		{
+			key: "linkedin",
+			link: "https://www.linkedin.com/in/imelnikov/"
+		},
 		{
 			key: "github",
-			link: ""
-		},{
-		key: "dribbble",
-			link: ""
-		}, {
+			link: "https://github.com/ivanempire"
+		},
+		{
+			key: "dribbble",
+			link: "https://dribbble.com/ivanempire"
+		},
+		{
 			key: "500px",
-			link: ""
+			link: "https://500px.com/p/ivanempire?view=photos"
 		}];
 </script>
 
@@ -31,12 +33,14 @@
 <section>
 	<Header headingText="Ivan Melnikov" />
 	<hr class="border border-slate-700 opacity-50 my-5" />
-	<article class="flex justify-center items-center space-x-6">
+	<article class="flex justify-center items-center space-x-6 mb-5">
 		{#each iconObjects as currentIcon}
 			<a href="{currentIcon.link}">
 				<Icon iconKey="{currentIcon.key}" />
 			</a>
 		{/each}
 	</article>
-<!--	<a href="#">Resume</a>-->
+	<article class="flex justify-center items-center">
+		<a href="/imelnikov-resume.pdf">Resume</a>
+	</article>
 </section>
