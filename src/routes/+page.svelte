@@ -32,7 +32,7 @@
 
 <section>
 	<Header headingText="Ivan Melnikov" />
-	<hr class="border border-slate-700 opacity-50 my-5" />
+	<hr class="hidden lg:block border border-slate-700 opacity-50 my-5" />
 	<article class="flex justify-center items-center space-x-6 mb-5">
 		{#each iconObjects as currentIcon}
 			<a href="{currentIcon.link}">
