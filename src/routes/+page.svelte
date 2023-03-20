@@ -1,16 +1,42 @@
+<script lang="ts">
+	import Header from "$lib/components/Header.svelte";
+	import Icon from "$lib/components/Icon.svelte";
+
+	type IconConfiguration = {
+		key: string,
+		link: string
+	};
+
+	let iconObjects: IconConfiguration[] = [
+			{
+				key: "linkedin",
+		link: ""
+	},
+		{
+			key: "github",
+			link: ""
+		},{
+		key: "dribbble",
+			link: ""
+		}, {
+			key: "500px",
+			link: ""
+		}];
+</script>
+
 <svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<title>Ivan Melnikov</title>
 </svelte:head>
 
 <section>
-	<h1>
-
-		to your new<br />SvelteKit app
-	</h1>
-
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
-
+	<Header headingText="Ivan Melnikov" />
+	<hr class="border border-slate-700 opacity-50 my-5" />
+	<article class="flex justify-center items-center space-x-6">
+		{#each iconObjects as currentIcon}
+			<a href="{currentIcon.link}">
+				<Icon iconKey="{currentIcon.key}" />
+			</a>
+		{/each}
+	</article>
+<!--	<a href="#">Resume</a>-->
 </section>
