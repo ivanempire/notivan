@@ -1,28 +1,29 @@
 <script lang="ts">
 	import Header from "$lib/components/Header.svelte";
-	import Icon from "$lib/components/Icon.svelte";
 
-	type IconConfiguration = {
-		key: string,
+	import {Github, Dribbble, Linkedin, Camera, type Icon as IconType} from "lucide-svelte";
+
+	type LinkConfiguration = {
+		icon: typeof IconType;
 		link: string
 	};
 
-	let iconObjects: IconConfiguration[] = [
+	let linkItems: LinkConfiguration[] = [
 		{
-			key: "linkedin",
+			icon: Linkedin,
 			link: "https://www.linkedin.com/in/imelnikov/"
 		},
 		{
-			key: "github",
+			icon: Github,
 			link: "https://github.com/ivanempire"
 		},
 		{
-			key: "dribbble",
+			icon: Dribbble,
 			link: "https://dribbble.com/ivanempire"
 		},
 		{
-			key: "500px",
-			link: "https://500px.com/p/ivanempire?view=photos"
+			icon: Camera,
+			link: "https://glass.photo/ivanempire"
 		}];
 </script>
 
@@ -34,13 +35,14 @@
 	<Header headingText="Ivan Melnikov" />
 	<hr class="hidden lg:block border border-slate-700 opacity-50 my-5" />
 	<article class="flex justify-center items-center space-x-6 mb-5">
-		{#each iconObjects as currentIcon}
-			<a href="{currentIcon.link}">
-				<Icon iconKey="{currentIcon.key}" />
+		{#each linkItems as linkItem}
+			{@const Icon = linkItem.icon}
+			<a href={linkItem.link}>
+				<Icon color="rgb(51 65 85)" size={30} />
 			</a>
 		{/each}
 	</article>
 	<article class="flex justify-center items-center">
-		<a href="/imelnikov-resume.pdf">Resume</a>
+		<a href="/imelnikov-resume.pdf">r&#233;sum&#233;</a>
 	</article>
 </section>
