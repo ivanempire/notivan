@@ -1,15 +1,20 @@
-name: Continuous integration
+name: Deploy to Firebase on commit to main
 on:
   push:
     branches:
       - main
 jobs:
-  build:
+  build_and_deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4
         with:
           version: 8
-      - run: pnpm install
-      - run: pnpm build
+      - run: pnpm install && pnpm check && pnpm build
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_NOTIVAN }}
+          channelId: live
+          projectId: notivan
