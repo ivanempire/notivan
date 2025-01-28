@@ -13,4 +13,3 @@ vite.config.ts.timestamp-*
 .idea/
 .firebase/
 .firebaserc
-firebase.json
